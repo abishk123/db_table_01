@@ -3,19 +3,19 @@ from django.db import models
 # Create your models here.
 class Topic(models.Model):
     topic_name=models.CharField(max_length=100,primary_key=True)
+    def __str__(self):
+        return self.topic_name
 
 class Webpage(models.Model):
     topic_name=models.ForeignKey(Topic,on_delete=models.CASCADE)
     name=models.CharField(max_length=100)
     url=models.URLField()
+    def __str__(self):
+        return self.name
 
 class AccessRecords(models.Model):
     name=models.ForeignKey(Webpage,on_delete=models.CASCADE)
     author=models.CharField(max_length=100)
     date=models.DateField(null=False)
-a=Topic()
-a.topic_name='cricket'
-b=Topic()
-b.topic_name='foot ball'
-c=Topic()
-c.topic_name='volly ball'
+    def __str__(self):
+        return str(self.name)
