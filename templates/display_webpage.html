@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topics</title>
+</head>
+<body>
+    <center>
+    <table border="2px">
+        <h1>DISPLAY WEBPAGES</h1>
+        <tr>
+            <th>Topic Name</th>
+            <th>web id(PK)</th>
+            <th>name</th>
+            <th>url</th>
+            <th>email</th>
+        </tr>
+    {% if LWO %}
+    {% for WO in LWO %}
+    <tr>
+        <td>{{ WO.topic_name }}</td>
+        <td>{{ WO.id }}</td>
+        <td>{{WO.name}}</td>
+        <td>{{WO.url}}</td>
+        <td>{{WO.email}}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+    </table>
+    </center>
+</body>
+</html>

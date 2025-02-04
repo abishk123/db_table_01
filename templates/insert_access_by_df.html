@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>access_by_df</title>
+</head>
+<body>
+    <center>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h1>INSERTING ACCESS RECORD BY DJANGO FORM</h1>
+            {{ EARO.as_p}}
+            <br>
+            <input type="submit" value="INSERT ACCESS RECORD">
+            <br>
+            <a href="{% url 'display_access' %}">DISPLAY ACCESS RECORD</a>
+        </form>
+    </center>
+</body>
+</html>

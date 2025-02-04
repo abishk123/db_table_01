@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topics</title>
+</head>
+<body>
+    <CENTER>
+    <table border="2px">
+        <h1>DISPLAY TOPICS</h1>
+        <tr>
+            <th>TOPIC_NAME</th>
+        </tr>
+    {% if LTO %}
+    {% for TO in LTO %}
+    <tr>
+        <td>{{ TO.topic_name }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+    </table>
+</CENTER>
+</body>
+</html>

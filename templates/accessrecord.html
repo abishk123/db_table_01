@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="id">id</label>
+            <input type="number" name="id" id="id">
+            <br><br>
+            <label for="name">name</label>
+            <input type="text" name="name" id="name">
+            <br><br>
+            <label for="author">author</label>
+            <input type="text" name="author" id="author">
+            <br><br>
+            <label for="date">date</label>
+            <input type="date" name="date" id="date">
+            <br><br>
+            <input type="submit" value="insert webpage">
+            <br>
+            <a href="/display_access">DISPLAY ACCESS RECORDS</a>
+        </form>   
+    </center>
+</body>
+</html>
